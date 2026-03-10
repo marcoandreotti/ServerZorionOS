@@ -1,0 +1,2 @@
+# ServerZorionOS
+Server in ZorionOS
