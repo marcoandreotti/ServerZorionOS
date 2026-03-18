@@ -1,0 +1,17 @@
+[Unit]
+Description=XControlFin API
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/apps/XControlFin/publish
+ExecStart=/usr/bin/dotnet /opt/apps/XControlFin/publish/xControlFin.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=xcontrolfin
+User=andreotti
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://0.0.0.0:5000
+
+[Install]
+WantedBy=multi-user.target
